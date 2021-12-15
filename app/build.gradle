@@ -60,8 +60,7 @@ android {
 }
 
 dependencies {
-
-    def appDependencies =  rootProject.ext.appDependencies
+    def appDependencies = rootProject.ext.appDependencies
     def testingDependencies =  rootProject.ext.testingDependencies
     def androidTestingDependencies =  rootProject.ext.androidTestingDependencies
 

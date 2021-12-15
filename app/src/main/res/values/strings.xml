@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">fisrtapp</string>
+    <string name="app_name">firstapp</string>
+    <string name="MAIN_FRAGMENT">main_fragment</string>
+    <string name="LIST_FRAGMENT">list_fragment</string>
 </resources>
