@@ -1,0 +1,38 @@
+ext {
+    compileSdk = 31
+    minSdk = 21
+    targetSdk = 31
+    applicationId = "com.first.sampleproject"
+
+    coreKtxVersion = "1.7.0"
+    appcompatVersion = "1.4.0"
+    materialVersion = "1.4.0"
+    constraintVersion = "2.1.2"
+    liveDataVersion = "2.4.0"
+    viewmodelVersion = "2.4.0"
+    testJunitVersion = "4.+"
+    gsonVersion = "2.8.6"
+    androidTestJunitVersion = "1.1.3"
+    androidTestEspressoVersion = "3.4.0"
+    navigationVersion = "2.3.5"
+
+    appDependencies = [
+            coreKtx                 :"androidx.core:core-ktx:${coreKtxVersion}",
+            appcompat               :"androidx.appcompat:appcompat:${appcompatVersion}",
+            material                :"com.google.android.material:material:${materialVersion}",
+            constraint              :"androidx.constraintlayout:constraintlayout:${constraintVersion}",
+            liveData                :"androidx.lifecycle:lifecycle-livedata-ktx:${liveDataVersion}",
+            viewmodel               :"androidx.lifecycle:lifecycle-viewmodel-ktx:${viewmodelVersion}",
+            navigationFragment      :"androidx.navigation:navigation-fragment-ktx:${navigationVersion}",
+            navigationKtx           :"androidx.navigation:navigation-ui-ktx:${navigationVersion}",
+    ]
+
+    testingDependencies = [
+            testJunit       : "junit:junit:${testJunitVersion}",
+    ]
+
+    androidTestingDependencies = [
+            androidTestJunit    : "androidx.test.ext:junit:${androidTestJunitVersion}",
+            androidTestEspresso : "androidx.test.espresso:espresso-core:${androidTestEspressoVersion}",
+    ]
+}

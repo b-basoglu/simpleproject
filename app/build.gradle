@@ -1,0 +1,87 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id "androidx.navigation.safeargs.kotlin"
+}
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdk rootProject.ext.compileSdk
+
+    defaultConfig {
+        applicationId rootProject.ext.applicationId
+        minSdk rootProject.ext.minSdk
+        targetSdk rootProject.ext.targetSdk
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled = true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+        }
+    }
+
+    flavorDimensions 'default'
+    productFlavors {
+        dev {
+            dimension 'default'
+            applicationIdSuffix ".dev"
+        }
+        live {
+            dimension 'default'
+        }
+    }
+
+    buildFeatures{
+        dataBinding = true
+    }
+
+    buildFeatures.viewBinding = true
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    def appDependencies =  rootProject.ext.appDependencies
+    def testingDependencies =  rootProject.ext.testingDependencies
+    def androidTestingDependencies =  rootProject.ext.androidTestingDependencies
+
+    api(
+            appDependencies.coreKtx,
+            appDependencies.appcompat,
+            appDependencies.material,
+            appDependencies.constraint,
+            appDependencies.liveData,
+            appDependencies.viewmodel,
+            appDependencies.navigationFragment,
+            appDependencies.navigationKtx,
+    )
+
+    testImplementation(
+            testingDependencies.testJunit
+    )
+
+    androidTestImplementation(
+            androidTestingDependencies.androidTestJunit,
+            androidTestingDependencies.androidTestEspresso
+    )
+}
