@@ -1,5 +1,7 @@
 # simpleproject
 
+https://youtu.be/QI_N0TZ819s
+
 Created a simple project to use as a sample project in my next videos. I did not pay attention that much for UI design.
 
 In this project I have done following implementations;
