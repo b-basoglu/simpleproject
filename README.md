@@ -2,7 +2,6 @@
 
 # First video -> Create a sample project to use in future videos
 
-You can see what we have done so far in our first video in this branch
 https://github.com/b-basoglu/simpleproject/tree/video1-first-sample-project
 
 https://youtu.be/QI_N0TZ819s
