@@ -17,7 +17,17 @@
                 app:argType="string"
                 app:nullable="true"/>
         </action>
+        <action
+            android:id="@+id/action_main_to_log_list"
+            app:destination="@id/log_fragment">
+        </action>
     </fragment>
+
+    <fragment
+        android:id="@+id/log_fragment"
+        android:name="com.simple.firstapp.ui.listlogs.ListLogsFragment"
+        android:label="@string/LOG_LIST_FRAGMENT"
+        tools:layout="@layout/list_logs_fragment"/>
 
     <fragment
         android:id="@+id/list_fragment"

@@ -2,4 +2,5 @@
     <string name="app_name">firstapp</string>
     <string name="MAIN_FRAGMENT">main_fragment</string>
     <string name="LIST_FRAGMENT">list_fragment</string>
+    <string name="LOG_LIST_FRAGMENT">log_list_fragment</string>
 </resources>

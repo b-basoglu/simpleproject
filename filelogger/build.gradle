@@ -1,0 +1,38 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdk rootProject.ext.compileSdk
+
+    defaultConfig {
+        minSdk rootProject.ext.minSdk
+        targetSdk rootProject.ext.targetSdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    flavorDimensions 'default'
+
+    productFlavors{
+        dev {
+            dimension 'default'
+        }
+        live{
+            dimension 'default'
+        }
+    }
+}
+
+dependencies {
+
+    def appDependencies = rootProject.ext.appDependencies
+
+    api (
+            appDependencies.coreKtx,
+            appDependencies.slf4j,
+            appDependencies.logback,
+            appDependencies.gson
+    )
+}

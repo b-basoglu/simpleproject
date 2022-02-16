@@ -38,6 +38,11 @@ class MainFragment : BaseFragment() {
                 navigateTo(MainFragmentDirections.actionMainToList("mainuser"))
             }
         )
+        binding.openLogs.setOnClickListener(
+            View.OnClickListener {
+                navigateTo(MainFragmentDirections.actionMainToLogList())
+            }
+        )
         activityViewModel.toastValueMLD.value = "mainFragment"
     }
 
