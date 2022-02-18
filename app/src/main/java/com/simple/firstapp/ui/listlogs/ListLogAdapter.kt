@@ -31,7 +31,9 @@ class ListLogAdapter(private val listener: LogSelectedListener) : ListAdapter<St
         fun bind(fileName:String?){
             binding.tvFile.text = fileName
             binding.itemLog.setOnClickListener {
-                listener.logSelected(fileName)
+                fileName?.let {
+                    listener.logSelected(it)
+                }
             }
         }
     }
@@ -51,6 +53,6 @@ class ListLogAdapter(private val listener: LogSelectedListener) : ListAdapter<St
     }
 
     interface LogSelectedListener{
-        fun logSelected(fileName: String?)
+        fun logSelected(fileName: String)
     }
 }

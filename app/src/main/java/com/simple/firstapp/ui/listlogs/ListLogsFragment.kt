@@ -42,7 +42,7 @@ class ListLogsFragment : BaseFragment() {
 
         val adapter: ListLogAdapter = ListLogAdapter(
             object : ListLogAdapter.LogSelectedListener {
-                override fun logSelected(fileName: String?) {
+                override fun logSelected(fileName: String) {
                     val fileLocation: File = File(FileLogger.pathToLog, fileName)
                     FileLogger.sendMail(
                         requireActivity(),
@@ -52,6 +52,7 @@ class ListLogsFragment : BaseFragment() {
                             fileLocation
                         ), "We have successfully created our local logs"
                     )
+                    FileLogger.d("Log Selected: $fileName")
                 }
             }
         )

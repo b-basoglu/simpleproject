@@ -23,6 +23,9 @@ import java.lang.Exception
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
+import android.content.ClipData
+import android.content.ClipData.Item
+
 
 object FileLogger {
     var pathToLog: String? = null
@@ -190,6 +193,12 @@ object FileLogger {
 
             // set the type to 'email'
             emailIntent.type = "vnd.android.cursor.dir/email"
+
+            emailIntent.clipData = ClipData(
+                "A label describing your file to the user",
+                arrayOf(emailIntent.type),
+                Item(uri)
+            )
             val to = arrayOf("bbasogluceng@gmail.com")
             emailIntent.putExtra(Intent.EXTRA_EMAIL, to)
             // the attachment
@@ -201,6 +210,7 @@ object FileLogger {
             )
             // mail text
             emailIntent.putExtra(Intent.EXTRA_TEXT, info)
+            emailIntent.flags = Intent.FLAG_GRANT_READ_URI_PERMISSION
             activity.startActivity(Intent.createChooser(emailIntent, "Send mail..."))
         }catch (e:Exception){
             e.printStackTrace()

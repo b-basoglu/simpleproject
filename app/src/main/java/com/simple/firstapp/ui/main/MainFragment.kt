@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
+import com.log.filelogger.FileLogger
 import com.simple.firstapp.MainActivityViewModel
 import com.simple.firstapp.R
 import com.simple.firstapp.base.BaseFragment
@@ -35,11 +36,13 @@ class MainFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.message.setOnClickListener(
             View.OnClickListener {
+                FileLogger.i("MainFragmentDirections.actionMainToList")
                 navigateTo(MainFragmentDirections.actionMainToList("mainuser"))
             }
         )
         binding.openLogs.setOnClickListener(
             View.OnClickListener {
+                FileLogger.i("MainFragmentDirections.actionMainToLogList")
                 navigateTo(MainFragmentDirections.actionMainToLogList())
             }
         )
