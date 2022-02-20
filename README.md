@@ -1,5 +1,8 @@
 # simpleproject
 
+
+https://github.com/b-basoglu/simpleproject/tree/video1-first-sample-project
+
 https://youtu.be/QI_N0TZ819s
 
 Created a simple project to use as a sample project in my next videos. I did not pay attention that much for UI design.
