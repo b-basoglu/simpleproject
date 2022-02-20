@@ -1,4 +1,4 @@
-# simpleproject
+# First Vidoe -> simpleproject
 
 
 https://github.com/b-basoglu/simpleproject/tree/video1-first-sample-project
