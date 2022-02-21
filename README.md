@@ -4,6 +4,8 @@
 
 https://github.com/b-basoglu/simpleproject/tree/video2-file-logging
 
+https://www.youtube.com/watch?v=0Evjd5c_x5E
+
 * Create an android library for logging
 * Use Android-logback to logs files into file and also bind logcat to android logback logger
 * Show your logs in a recyclerview
