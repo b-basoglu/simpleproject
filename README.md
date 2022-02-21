@@ -1,14 +1,15 @@
 # simpleproject
 
-# First video -> Create a sample project to use in future videos
+# First Vidoe -> simpleproject
+
 
 https://github.com/b-basoglu/simpleproject/tree/video1-first-sample-project
 
-https://youtu.be/QI_N0TZ819s
+https://www.youtube.com/watch?v=auH6ubeHKrs
 
 Created a simple project to use as a sample project in my next videos. I did not pay attention that much for UI design.
 
-In this phase I have done following implementations;
+In this project I have done following implementations;
 
 * Single activity and two fragments
 * Rearrange gradle scripts with dependencies.gradle
@@ -21,4 +22,5 @@ In this phase I have done following implementations;
 
 Please feel free to give feedback
 
-Thank you everyone :D.
+Thank you everyone, see you on next video :D.
+
