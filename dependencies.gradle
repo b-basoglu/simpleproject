@@ -18,6 +18,7 @@ ext {
     gsonVersion = "2.8.6"
     slf4jVersion = "1.7.28"
     logbackVersion = "2.0.0"
+    securityVersion = "1.1.0-alpha01"
 
     appDependencies = [
             coreKtx                 :"androidx.core:core-ktx:${coreKtxVersion}",
@@ -31,6 +32,7 @@ ext {
             slf4j                   : "org.slf4j:slf4j-api:$slf4jVersion",
             logback                 : "com.github.tony19:logback-android:$logbackVersion",
             gson                    : "com.google.code.gson:gson:${gsonVersion}",
+            securityCrypto          : "androidx.security:security-crypto:$securityVersion",
     ]
 
     testingDependencies = [

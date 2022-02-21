@@ -73,7 +73,8 @@ dependencies {
             appDependencies.viewmodel,
             appDependencies.navigationFragment,
             appDependencies.navigationKtx,
-            project(':filelogger')
+            project(':filelogger'),
+            project(':biometriclogin')
     )
 
     testImplementation(
